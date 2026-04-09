@@ -5,6 +5,9 @@ calculator.py
 One function per operation, in order.
 """
 # First example
+#https://github.com/evelyn-c68/lab11--EC---KB-.git
+# Partner 1: Evelyn Chen
+# Partner 2: Kaylee Bleeker
 import math
 
 def add(a, b):
