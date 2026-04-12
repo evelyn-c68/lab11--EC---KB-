@@ -3,10 +3,10 @@
 # Partner 2: Kaylee Bleeker
 
 import unittest
-from calculator import mul, div, log, hypotenuse, square_root
-from calculator import add, sub, mul, div, log, exp
+from calculator import add, sub, mul, div, log, exp, hypotenuse, square_root
 
 class TestCalculator(unittest.TestCase):
+
     ######### Partner 2
     def test_add(self): # 3 assertions
         self.assertEqual(add(0,0),0)
@@ -29,18 +29,20 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(div(2, 1), 2)
         self.assertEqual(div(-6, 2), -3)
         with self.assertRaises(ZeroDivisionError):
-            div(0, 10)
+            div(6, 0)
 
     ######## Partner 2
-    def test_divide_by_zero(self): # 1 assertion
-        # call division function inside, example:
+    def test_divide_by_zero(self):
         with self.assertRaises(ZeroDivisionError):
-            div(0, 5)
+            div(10, 0)
 
-    def test_log_invalid_argument(self): # 3 assertions
-        self.assertEqual(log(1, 100),2)
-        self.assertEqual(log(2,4),2)
-        self.assertEqual(log(3,27),3)
+    def test_logarithm(self):
+        with self.assertRaises(ValueError):
+            log(-1, 10)
+        with self.assertRaises(ValueError):
+            log(1, 100)
+        with self.assertRaises(ValueError):
+            log(2, -5)
 
     def test_log_invalid_base(self): # 1 assertion
         # use same technique from test_divide_by_zero
@@ -49,7 +51,7 @@ class TestCalculator(unittest.TestCase):
 
     
     ######## Partner 1
-    def test_log(self):
+    def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):
             log(-1, 10)
         with self.assertRaises(ValueError):
