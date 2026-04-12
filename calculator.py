@@ -1,9 +1,3 @@
-"""
-calculator.py
-- Defines functions used to create a simple calculator
-
-One function per operation, in order.
-"""
 #https://github.com/evelyn-c68/lab11--EC---KB-.git
 # Partner 1: Evelyn Chen
 # Partner 2: Kaylee Bleeker
@@ -13,7 +7,7 @@ import math
 def add(a, b):
     return a + b
 
-def sub(a, b):
+def subtract(a, b):
     return a - b
 
 def mul(a, b):
@@ -24,7 +18,7 @@ def div(a, b):
         raise ZeroDivisionError("Cannot divide by zero")
     return a / b
 
-def log(a, b):
+def logarithm(a, b):
     if a <= 0 or b <= 0 or a == 1:
         raise ValueError("Invalid input for a logarithm")
     return math.log(b, a)
