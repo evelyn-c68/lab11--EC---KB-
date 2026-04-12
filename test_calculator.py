@@ -18,7 +18,6 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(sub(0,5),-5)
         self.assertEqual(sub(3,3),0)
 
-    ##########################
 
     ######## Partner 1
     def test_mul(self):
@@ -47,7 +46,7 @@ class TestCalculator(unittest.TestCase):
         # use same technique from test_divide_by_zero
         with self.assertRaises(ValueError):
             log(0,10) #base cannot 0
-    # ##########################
+
     
     ######## Partner 1
     def test_log(self):
@@ -67,7 +66,7 @@ class TestCalculator(unittest.TestCase):
         self.assertAlmostEqual(square_root(9), 3.0)
         with self.assertRaises(ValueError):
             square_root(-4)
-    ##########################
+
 
 # Do not touch this
 if __name__ == "__main__":
